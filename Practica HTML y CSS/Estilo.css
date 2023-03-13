@@ -1,0 +1,620 @@
+/* MODIFICACIONES GENERALES */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding:0;
+    margin:0;
+    background-color: black;
+    color:white;
+}
+
+
+body, header, li.menu, li.submenu, div,section, article, footer,nav  {
+    border: 1px solid white;
+}
+
+
+ul,li {
+    list-style-type: none;
+    padding:none;
+    margin:none;
+}
+
+
+li {
+    background-color: rgb(31, 24, 24);
+}
+
+
+a {
+    text-decoration:none ;
+    color:white
+}
+
+
+a:visited {
+    color:gray
+}
+
+
+header {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 3em;
+    position:fixed;
+    top:0;
+    background-color: rgb(57, 41, 41);
+}
+
+header:hover {
+    color:gainsboro
+}
+
+/* MENU LATERAL OCULTABLE */
+
+
+.rightmenu {
+    position:fixed;
+    top:0px;
+    margin-left: 97%;
+    width:100%;
+    height:50px;
+    padding:0px;
+    background-image: url(Men.png);
+    background-size:60px;
+    background-repeat: no-repeat;
+    background-color: rgb(106, 72, 72);
+}
+
+
+.rightmenu:hover {
+    position:fixed;
+    margin-left: 80%;
+    width:100%;
+    height:41%;    
+    background-color:rgb(57, 41, 41);
+    background-size: 370px 135px;
+    animation-name: increase;
+    animation-duration: 0.2s;
+    overflow: hidden;
+}
+
+
+.rightmenu ul {
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+.rightmenu > ul {
+    display: none;
+}
+
+.rightmenu:hover > ul {
+    display:flex;
+    flex-direction:column;
+    padding-top:135px;
+    animation-name: displayRightMenu;
+    animation-duration: 1.2s;
+    bottom: 0px;
+}
+
+
+.rightmenu ul li {
+    font-size: 4em;
+}
+
+
+.rightmenu ul li:hover {
+    color:blanchedalmond;
+}
+
+
+.rightmenu ul li p, address {
+    padding:0px;
+    margin:0px;
+    padding-left: 40px;
+    font-size:0.5em;
+    line-height: 1em;
+    padding-top: 5px;
+}
+
+
+.rightmenu ul li:hover > p, .rightmenu ul li:hover > address {
+    font-size: 0.55em;
+    color:gainsboro;
+}
+
+
+/* MENU FIJO DESPLEGABLE */
+
+
+nav.top {
+    position:fixed;
+    width:100%;
+    height: 100px;
+    top: 50px;
+    padding:0px;
+}
+
+
+nav.top ul {
+    position:fixed;   
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    margin:0;
+    font-size: 6.3em;
+    text-align:center;
+}
+
+
+nav.top ul ul {
+    display:none;
+    font-size: 0.5em;
+}
+
+
+nav.top ul ul li {
+    width:25%
+}
+
+
+nav.top ul li:hover > ul {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    animation-name: display;
+    animation-duration: 0.3s;
+}
+
+
+nav.top ul li:hover {
+    font-size: 1.1em;
+    color:gainsboro;
+    background-color: rgb(22, 20, 20);
+}
+
+@media only screen and (max-width: 900px) {
+    header{
+        height: 3%;
+        font-size:0.6em;
+    }
+    nav.top {
+        font-size: 0.2em;
+        margin-top: -40px;
+        height: 23px;
+    }
+    nav.top:hover {
+        height: 40px;
+    }
+    nav.top > ul{
+        height: 23px;
+    }
+    nav.top ul li ul li {
+        height: 15px;
+    }
+    .rightmenu {
+        background-size: 30px;
+        height: 7%;
+    }
+    .rightmenu:hover{
+        font-size: 0.2em;
+        background-size: 90px 30px;
+        height: 90px;
+        width: 130px;
+        margin-left: 83%;
+    }
+    .rightmenu:hover ul {
+        padding-top: 30px;
+    }
+    body,html {
+        height: 200%;
+    background-color: blue;
+    }
+}
+
+
+/* PAGINA 1 */
+
+.HtmlPag1,.BodyPag1 {
+    height: 120%;
+    width: 100%;
+    padding:0;
+    margin:0;
+    color:white;
+}
+
+
+div.pagina1 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 50% 15%;
+    grid-template-rows: 12% 58% 20% 10%;
+}
+
+
+section.left {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start:1 ;
+    grid-column-end: 1;
+}
+
+
+article {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start:2 ;
+    grid-column-end: 2;
+}
+
+
+article,section.left {
+    border-top: 0px;
+}
+
+
+section.topright {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;    
+}
+
+
+section.right {
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;    
+    overflow: scroll;
+}
+
+
+footer {
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 6em;
+    text-align: center;
+    background-color:rgb(58, 8, 8);
+}
+
+
+footer:hover {
+    font-size: 7em;
+    color:gainsboro;
+    background-color:rgb(39, 2, 2);
+}
+
+@media only screen and (max-width: 900px) {
+    .HtmlPag1 {
+        height:max-content;
+    }
+    .BodyPag1 {
+        height:max-content
+    }
+    section, article {
+        overflow: scroll;
+    }
+    p {
+        font-size: 0.2em;
+    }
+    footer {
+        font-size: 1em;
+        height:27px;
+        margin-top: 0px;
+    }
+    footer:hover {
+        font-size: 1.1em;
+    }
+}
+
+
+
+/* FORMULARIO */
+
+
+div.form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25% ;
+    grid-template-rows: 17% 3% 75% 5%;
+}
+
+
+div.GaleriaFormulario {
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end:4;
+    animation: galeria1 10s steps(1, start) infinite;
+}
+
+
+div.contenedor {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start:2 ;
+    grid-column-end: 2;
+    background-color:darkred;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    height: 100%;
+    width: 60%;
+    margin-left: 20%;
+    border-bottom: 0px;
+}
+
+
+input, form {
+    border: 1px solid black;
+}
+
+
+input, legend {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+
+input:hover {
+    background-color:aliceblue;
+    border: 1px solid green;
+    color: darkblue;
+}
+
+
+ul.form {
+    padding-right: 120px;
+}
+
+
+div.subres {
+    border:none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.submit, .reset {
+    width: 30%;
+    height: 40%;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    div.form {
+        margin-top: -160px
+    }´
+    input.submit, input.reset  {
+        margin-left: 55px;
+        margin-right: 0px;
+        font-size: 0.1em;
+        padding-left: 3px;
+    }
+    input.submit {
+        margin-left:10px;
+        font-size: 0.1em;
+    }
+}
+
+/* PAGINA FOTOS*/
+
+
+div.ContenedorGaleria {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 25% 55% 20%;
+}
+
+
+div.ContenedorGaleria > div {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./Galeria1/Foto5.jpeg);
+    object-fit: cover;
+}
+
+div.foto1 {
+    background-image: url(./Galeria1/Foto1.jpeg);
+}
+
+div.foto2 {
+    background-image: url(./Galeria1/Foto2.jpeg);
+}
+
+div.foto3 {
+    background-image: url(./Galeria1/Foto3.jpeg);
+}
+
+div.foto4 {
+    background-image: url(./Galeria1/Foto4.jpeg);
+}
+
+div.ContenedorGaleria div > div {
+    width: 25%;
+    height:90%;
+    margin-top: 20px;
+    margin-left: 10px;
+    object-fit:cover;
+    border: none;
+}
+
+
+
+div div div p {
+    margin-top: 410px;
+    color: red;
+    font-size: 2em;
+    padding-left: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+    html.galeria,body.galeria {
+        height: 100%;
+    }
+    div.ContenedorGaleria {
+        height: 1100px;
+        background-color: blue;
+        margin-top:-220px;
+    }
+    .ContenedorGaleria > div{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 800px;
+    }
+    div.ContenedorGaleria div > div {
+        margin-left: 150px;
+        background-repeat: repeat;
+        height:20%;
+        width: max-content;
+    }
+    div div div p {
+        margin-top: 130px;
+        color: red;
+        font-size: 2em;
+        padding-left: 23px;
+    }
+}
+
+/* PAGINA HORARIO */
+
+div.horario {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 30% 60% 10%;
+}
+
+
+td,th,tr,table {
+    border: 1px black solid;
+    font-size: 1.2em;
+}
+
+
+table {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    text-align: center;
+}
+
+
+th:nth-child(odd) {
+    background-color: yellow;
+    color: red;
+}
+
+
+th:nth-child(even) {   
+    background-color: orange;
+    color: blue;
+}
+
+
+td:nth-child(odd) {
+    background-color: blueviolet;
+    color: black;
+}
+
+
+td:nth-child(1) {
+    background-color:aqua;
+    color: brown;
+}
+
+
+td:nth-child(even) {
+    background-color: blue;
+    color: black;
+}
+
+
+td:hover,th:hover,tr:hover {
+    font-size: 1.3em;
+}
+
+
+@media only screen and (max-width: 900px) {
+    html.horario {
+        height: 320px;
+    }
+    body.horario {
+        height: 320px;
+    }
+    div.horario {
+        height: 300px;
+    }
+    td,th,tr,table {
+        font-size: 0.1em;
+    }
+    td:hover,th:hover,tr:hover {
+        background-color: white;
+    }
+}
+
+
+/* Animaciones */
+
+
+@keyframes galeria1 {
+    25% {background-image: url(./Galeria1/Foto1.jpeg); background-size: cover;}
+    50% {background-image: url(./Galeria1/Foto2.jpeg); background-size: cover;}
+    75% {background-image: url(./Galeria1/Foto3.jpeg); background-size: cover;}
+    100% {background-image: url(./Galeria1/Foto4.jpeg); background-size: cover;}
+}
+
+
+@keyframes display {
+    0% {overflow: hidden; height: 0px;}
+    25% { height: 20px;}
+    50% { height: 40px;}
+    75% { height: 60px;}
+    100% {  height: 70px;}
+}
+
+
+@keyframes displayRightMenu {
+    0% {overflow: hidden; height: 0%;}
+    25% { height: 50%;}
+    50% { height: 100%;}
+    75% { height: 150%;}
+    100% {  height: 200%;}
+}
+
+
+@keyframes increase {
+    0% {overflow: hidden; background-size: 140px 70px;}
+    25% {  background-size: 180px 80px;}
+    50% {  background-size: 240px 90px;}
+    75% {  background-size: 280px 100px;}
+    100% {  background-size: 300px 110px;}
+}
+
+
