@@ -195,7 +195,7 @@
 
   **Cambios galeria.** 
   
-  @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 900px) {
     html.galeria,body.galeria {
         height: 100%;
     }
@@ -208,7 +208,13 @@
         flex-wrap: wrap;
         flex-direction: column;
         width: 100%;
-        height: 800px;
+        height:100%
+    }
+    .ContenedorGaleria div.b{
+        flex-direction: column;
+        width: 100%;
+        height:180%;
+        text-align: center;
     }
     div.ContenedorGaleria div > div {
         margin-left: 150px;
@@ -217,13 +223,12 @@
         width: max-content;
     }
     div div div p {
-        margin-top: 130px;
+        margin-top: -40px;
         color: red;
         font-size: 2em;
         padding-left: 23px;
     }
   }
-
   **Cambios horario.** 
   
   @media only screen and (max-width: 900px) {
