@@ -371,64 +371,62 @@
   
   *Incluido.*
 
-  **Div que contiene la galeria.**
-  
+  **Div general**
   div.ContenedorGaleria {
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-rows: 25% 55% 20%;
   }
-   
-  **Div con la primera imagen dentro del cual estaran las otras, contiene la imagen 5.** 
-  
+
+  **Div que contiene la primera galeria**
   div.ContenedorGaleria > div {
     grid-row-start: 2;
     grid-row-end: 2;
-    background-color: red;
     display: flex;
     flex-direction: row;
     background-image: url(./Galeria1/Foto5.jpeg);
-    object-fit: cover;
-  }
-  
-  **Imagenes 1-4.**  
-  
-  div.foto1 {
-    background-image: url(./Galeria1/Foto1.jpeg);
-  }
-  
-  div.foto2 {
-    background-image: url(./Galeria1/Foto2.jpeg);
   }
 
-  div.foto3 {
-    background-image: url(./Galeria1/Foto3.jpeg);
-  }
+  **Div que contiene la segunda galeria**
+  div.ContenedorGaleria div.b {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./Galeria1/Foto5.jpeg);
+    margin-top: 20px;
+}
   
-  div.foto4 {
-    background-image: url(./Galeria1/Foto4.jpeg);
-  }
-  
-  **Div que contiene las imagenes 1-4, el div que esta dentro del div con la imagen 5.**  
-  
-  div.ContenedorGaleria div > div {
+  **Div con las imagenes y las palabras**
+  div.ContenedorGaleria div div {
     width: 25%;
     height:90%;
     margin-top: 20px;
     margin-left: 10px;
-    object-fit:cover;
     border: none;
   }
-  
-  **Texto debajo de las imagenes.**
-  
+
+  **imagenes galeria 1**
+  div.ContenedorGaleria div img {
+    width: 100%;
+    height:100%;
+    object-fit:fill;
+  }
+
+  **imagenes galeria 2**
+  div.ContenedorGaleria div.b img {
+    object-fit: scale-down;
+  }
+
+  **Modificado los p**
   div div div p {
-    margin-top: 410px;
+    margin-top: -40px;
     color: red;
     font-size: 2em;
     padding-left: 100px;
   }
+
 
 
 - Tots els elements HTML han de tenir estils (border, shadow, font, margin, padding, tamany…) adequats per donar un estil homogeni i modern.
